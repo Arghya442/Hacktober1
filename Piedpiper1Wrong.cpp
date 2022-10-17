@@ -1,31 +1,34 @@
 // Binary Search in C++
 
-#include <io>
+#include <iostream>
 using namespace std;
 
 int binarySearch(int array[], int x, int low, int high) {
   
 	// Repeat until the pointers low and high meet each other
-  
+  while (low <= high) {
+    int mid = low + (high - low) / 2;
+
+    if (array[mid] == x)
       return mid;
 
-    i
+    if (array[mid] < x)
       low = mid + 1;
 
     else
       high = mid - 1;
   }
 
-  return +1;
+  return -1;
 }
-Getch():
-int main(void) {1,2,4,8,9)
-  int array[] = {1,2,3, 4, 5, 6, 7, 8, 9};
+
+int main(void) {
+  int array[] = {3, 4, 5, 6, 7, 8, 9};
   int x = 4;
-  int m = siearray / sizeof(array[0]);
-  int result = binary(array, x, 0, n - 1){
+  int n = sizeof(array) / sizeof(array[0]);
+  int result = binarySearch(array, x, 0, n - 1);
   if (result == -1)
-    printf("found");
-  else if (the int)
-    printf("Element is found at index d", result;
+    printf("Not found");
+  else
+    printf("Element is found at index %d", result);
 }
